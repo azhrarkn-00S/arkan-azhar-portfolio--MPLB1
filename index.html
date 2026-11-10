@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkan Azhar - Portofolio Professional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        parchment: {
+                            100: '#FDFBF7',
+                            200: '#F4EAD5',
+                            300: '#EFE3C3',
+                            400: '#E2D1A8',
+                            800: '#8C7A57'
+                        },
+                        sumi: {
+                            900: '#111110',
+                            800: '#1C1B18',
+                            700: '#2A2925',
+                            500: '#4A4843',
+                            300: '#8C8983'
+                        },
+                        crimson: {
+                            DEFAULT: '#9E2A2B',
+                            dark: '#7A1F20',
+                            light: '#C13B3C'
+                        },
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB'
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        serifJp: ['"Noto Serif JP"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Aged Parchment Background Texture */
+        body {
+            background-color: #F4EAD5;
+            background-image: radial-gradient(#1C1B18 0.5px, transparent 0.5px), radial-gradient(#1C1B18 0.5px, #F4EAD5 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            background-color: #F4EAD5;
+            color: #1C1B18;
+        }
+
+        /* Ink Splatter / Brush Stroke Card Borders */
+        .ink-border {
+            border: 2px solid #1C1B18;
+            box-shadow: 4px 4px 0px 0px #1C1B18;
+            position: relative;
+        }
+
+        .ink-border-crimson {
+            border: 2px solid #9E2A2B;
+            box-shadow: 4px 4px 0px 0px #9E2A2B;
+        }
+
+        /* Ink Splash Effect Decoration */
+        .ink-brush-bg {
+            background: linear-gradient(135deg, rgba(28,27,24,0.95) 0%, rgba(42,41,37,0.9) 100%);
+            clip-path: polygon(0% 0%, 100% 2%, 98% 98%, 2% 100%);
+        }
+
+        .ink-badge {
+            clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #EFE3C3;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1C1B18;
+            border-radius: 2px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9E2A2B;
+        }
+
+        /* Japanese Stamp / Hanko Logo Effect */
+        .hanko-stamp {
+            border: 3px solid #9E2A2B;
+            color: #9E2A2B;
+            font-weight: 900;
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            transform: rotate(-5deg);
+            box-shadow: 0 0 2px rgba(158, 42, 43, 0.4);
+        }
+
+        /* Japanese Kanji Decorative Floating Background Elements */
+        .kanji-bg {
+            font-family: 'Noto Serif JP', serif;
+            opacity: 0.05;
+            user-select: none;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-crimson selection:text-white leading-relaxed relative overflow-x-hidden">
+
+    <!-- Background Decorative Kanji -->
+    <div class="fixed top-20 left-5 text-9xl font-extrabold kanji-bg z-0 hidden lg:block">侍</div>
+    <div class="fixed bottom-20 right-5 text-9xl font-extrabold kanji-bg z-0 hidden lg:block">道</div>
+    <div class="fixed top-1/2 right-10 text-9xl font-extrabold kanji-bg z-0 hidden lg:block">武</div>
+
+    <!-- NAVBAR SECTION -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-sumi-800/10 backdrop-blur-md bg-parchment-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo Brand -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="hanko-stamp font-serifJp text-lg tracking-wider group-hover:scale-105 transition-transform">
+                        明汗
+                    </div>
+                    <div>
+                        <span class="font-cinzel text-xl font-bold tracking-widest text-sumi-800 block leading-tight">ARKAN AZHAR</span>
+                        <span class="text-[10px] tracking-widest uppercase text-crimson font-semibold">Samurai Portfolio</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8 font-cinzel text-sm font-semibold tracking-wider text-sumi-800">
+                    <a href="#hero" class="hover:text-crimson transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-crimson hover:after:w-full after:transition-all">BERANDA</a>
+                    <a href="#about" class="hover:text-crimson transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-crimson hover:after:w-full after:transition-all">TENTANG</a>
+                    <a href="#skills" class="hover:text-crimson transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-crimson hover:after:w-full after:transition-all">SKILL</a>
+                    <a href="#projects" class="hover:text-crimson transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-crimson hover:after:w-full after:transition-all">PROYEK</a>
+                    <a href="#contact" class="hover:text-crimson transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-crimson hover:after:w-full after:transition-all">KONTAK</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-sumi-800 hover:text-crimson focus:outline-none p-2" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-parchment-300 border-b-2 border-sumi-800 px-4 pt-2 pb-6 space-y-3 font-cinzel text-center">
+            <a href="#hero" class="mobile-nav-link block py-2 text-sumi-800 font-bold hover:text-crimson border-b border-sumi-800/10">BERANDA</a>
+            <a href="#about" class="mobile-nav-link block py-2 text-sumi-800 font-bold hover:text-crimson border-b border-sumi-800/10">TENTANG</a>
+            <a href="#skills" class="mobile-nav-link block py-2 text-sumi-800 font-bold hover:text-crimson border-b border-sumi-800/10">SKILL</a>
+            <a href="#projects" class="mobile-nav-link block py-2 text-sumi-800 font-bold hover:text-crimson border-b border-sumi-800/10">PROYEK</a>
+            <a href="#contact" class="mobile-nav-link block py-2 text-sumi-800 font-bold hover:text-crimson border-b border-sumi-800/10">KONTAK</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="min-h-[calc(100vh-5rem)] flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8 relative">
+            <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6 z-10 order-2 lg:order-1">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-crimson/10 border border-crimson/30 rounded-full text-crimson font-medium text-sm">
+                        <span class="w-2 h-2 rounded-full bg-crimson animate-pulse"></span>
+                        Siswa MPLB & Professional Administrator
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-cinzel text-sumi-900 tracking-tight leading-tight">
+                        ARKAN <span class="text-crimson relative inline-block">AZHAR
+                            <svg class="absolute -bottom-2 left-0 w-full h-3 text-crimson" viewBox="0 0 100 20" preserveAspectRatio="none">
+                                <path d="M0 10 Q 50 0 100 10" stroke="currentColor" stroke-width="4" fill="none"/>
+                            </svg>
+                        </span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-sumi-700 max-w-2xl font-serifJp leading-relaxed italic bg-parchment-300/50 p-4 border-l-4 border-sumi-800 rounded-r-lg">
+                        "Hallo, selamat datang di website portofolio saya, website ini di buat untuk saya menaruh seluruh project yang saya buat"
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#projects" class="px-8 py-3.5 bg-sumi-800 text-parchment-100 font-cinzel font-bold text-sm tracking-wider uppercase ink-border hover:bg-crimson transition-all duration-300 flex items-center gap-3 group">
+                            <span>Lihat Karya</span>
+                            <i class="fa-solid fa-kaaba group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#contact" class="px-8 py-3.5 border-2 border-sumi-800 text-sumi-800 font-cinzel font-bold text-sm tracking-wider uppercase hover:bg-sumi-800 hover:text-parchment-100 transition-all duration-300">
+                            Hubungi Saya
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Profile Frame / Artwork -->
+                <div class="lg:col-span-5 flex justify-center order-1 lg:order-2 z-10">
+                    <div class="relative w-64 sm:w-80 h-64 sm:h-80">
+                        <!-- Outer Ink Decorative Ring -->
+                        <div class="absolute -inset-4 rounded-full border-4 border-dashed border-sumi-800/40 animate-[spin_60s_linear_infinite]"></div>
+                        <div class="absolute -inset-2 rounded-full border-2 border-crimson/60"></div>
+
+                        <!-- Profile Picture Container -->
+                        <div class="w-full h-full rounded-full overflow-hidden ink-border border-4 border-sumi-800 bg-parchment-300 relative group">
+                            <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Arkan Azhar Samurai Profile Illustration" 
+                                 class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-110 group-hover:grayscale-0 transition-all duration-500"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/400x400/1C1B18/F4EAD5?text=Arkan+Azhar';">
+                            <!-- Sumi Tinta Shadow Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-sumi-900/60 via-transparent to-transparent"></div>
+                        </div>
+
+                        <!-- Floating Japanese Seal -->
+                        <div class="absolute -bottom-2 -right-2 bg-crimson text-parchment-100 rounded-full p-4 ink-border shadow-lg font-serifJp text-xs font-bold leading-none text-center">
+                            武士<br><span class="text-[9px] font-sans">VISION</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. ABOUT SECTION -->
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-parchment-300/60 border-y-2 border-sumi-800/20 relative">
+            <div class="max-w-5xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center space-y-2 mb-16">
+                    <span class="font-cinzel text-crimson font-bold tracking-widest text-sm uppercase">Siapa Saya</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold font-cinzel text-sumi-900">TENTANG SAYA</h2>
+                    <div class="w-24 h-1 bg-crimson mx-auto mt-2"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+                    <!-- Left Column: School Badge Card -->
+                    <div class="md:col-span-5 bg-parchment-200 p-8 ink-border flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="w-16 h-16 bg-sumi-800 text-gold flex items-center justify-center rounded-lg text-2xl ink-border">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold font-cinzel text-sumi-900">SMK CYBER MEDIA</h3>
+                            <p class="text-crimson font-semibold text-sm tracking-wide">
+                                Jurusan: MPLB (Manajemen Perkantoran Dan Layanan Bisnis)
+                            </p>
+                        </div>
+                        <div class="border-t border-sumi-800/20 pt-4">
+                            <div class="flex items-center gap-3 text-sm font-medium text-sumi-700">
+                                <i class="fa-solid fa-location-dot text-crimson"></i>
+                                <span>Jakarta, Indonesia</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Description Card -->
+                    <div class="md:col-span-7 bg-sumi-800 text-parchment-100 p-8 ink-border flex flex-col justify-center space-y-4 relative overflow-hidden">
+                        <!-- Background Pattern -->
+                        <div class="absolute -right-10 -bottom-10 text-9xl text-sumi-700/20 font-serifJp pointer-events-none">道</div>
+                        
+                        <h3 class="text-2xl font-bold font-cinzel text-gold">Dedikasi & Disiplin</h3>
+                        <p class="text-parchment-200 leading-relaxed font-sans text-sm sm:text-base">
+                            Saya adalah seorang siswa aktif di <strong class="text-white">SMK CYBER MEDIA</strong> yang mengambil konsentrasi keahlian pada jurusan <strong class="text-white">MPLB (Manajemen Perkantoran Dan Layanan Bisnis)</strong>.
+                        </p>
+                        <p class="text-parchment-200 leading-relaxed font-sans text-sm sm:text-base">
+                            Memadukan prinsip kedisiplinan tingkat tinggi seperti nilai-nilai Bushido zaman samurai dengan dunia administrasi modern. Saya berfokus pada efisiensi kelola dokumen bisnis, komunikasi profesional, penyusunan laporan digital, dan pembuatan solusi web berbasis proyek digital.
+                        </p>
+
+                        <div class="pt-4 grid grid-cols-2 gap-4 text-center">
+                            <div class="bg-sumi-700/50 p-3 rounded border border-sumi-500">
+                                <div class="text-gold font-bold text-xl font-cinzel">100%</div>
+                                <div class="text-xs text-parchment-300">Komitmen Tugas</div>
+                            </div>
+                            <div class="bg-sumi-700/50 p-3 rounded border border-sumi-500">
+                                <div class="text-gold font-bold text-xl font-cinzel">MPLB</div>
+                                <div class="text-xs text-parchment-300">Spesialisasi Bisnis</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SKILLS SECTION -->
+        <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 relative">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center space-y-2 mb-16">
+                    <span class="font-cinzel text-crimson font-bold tracking-widest text-sm uppercase">Keahlian Utama</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold font-cinzel text-sumi-900">SKILL & KEMAMPUAN</h2>
+                    <div class="w-24 h-1 bg-crimson mx-auto mt-2"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Skill Card 1: Microsoft Word -->
+                    <div class="bg-parchment-200 p-6 ink-border group hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-blue-900 text-white rounded flex items-center justify-center text-2xl font-bold">
+                                <i class="fa-solid fa-file-word"></i>
+                            </div>
+                            <span class="font-cinzel font-bold text-crimson">95%</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-cinzel text-sumi-900 mb-2">Microsoft Word</h3>
+                        <p class="text-sm text-sumi-700 mb-4">Penyusunan surat resmi, format dokumen bisnis kompleks, pembuatan laporan otomatis, dan Mail Merge.</p>
+                        <div class="w-full bg-parchment-400 h-2.5 rounded-full overflow-hidden border border-sumi-800">
+                            <div class="bg-sumi-800 h-full rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 2: Microsoft Excel -->
+                    <div class="bg-parchment-200 p-6 ink-border group hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-emerald-900 text-white rounded flex items-center justify-center text-2xl font-bold">
+                                <i class="fa-solid fa-file-excel"></i>
+                            </div>
+                            <span class="font-cinzel font-bold text-crimson">90%</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-cinzel text-sumi-900 mb-2">Microsoft Excel</h3>
+                        <p class="text-sm text-sumi-700 mb-4">Pengolahan data keuangan, formula kompleks (VLOOKUP, IF, INDEX/MATCH), dan tabel Pivot visual.</p>
+                        <div class="w-full bg-parchme
